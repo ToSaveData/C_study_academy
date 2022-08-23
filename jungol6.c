@@ -2,7 +2,7 @@
 
 int main()
 {
-	int a, b, c, n, m = 0, i, flag = 0, cnt =1;
+	int a, b, c, n, m = 0, i, flag = 0, cnt = -1;
 	int arr[30];
 	int k[30];
 	
@@ -26,10 +26,12 @@ int main()
 	{
 		if (i == 0)
 		{
+			cnt++;
 			arr[i] = n % 10;
 		}
 		else if (i == 1)
 		{
+			cnt++;
 			m = (n / 10);
 			arr[i] = m;
 		}
@@ -37,18 +39,19 @@ int main()
 		{
 			if (i > 1 && m == 0)
 			{
-				cnt = i;
-				cnt--;
+				cnt++;
 				break;
 			}
 			else
 			{
+				cnt++;
 				m /= 10;
 				arr[i] = m;
 			}
 		}
 		
 	}	
+	printf("%d\n", n);
 	
 	for (i = 0; i < cnt; i++)
 	{
@@ -68,14 +71,15 @@ int main()
 			}
 		}
 	}
-
+	for (i = 11; i < 21; i++)
+		printf("%d\n", arr[i]);
 	for (i = 11; i < 11 + cnt; i++)
 	{
 		 if(arr[i] ==0)
 			{if (k[0] == 20)
 				k[0] = 1;
 			else if( k[0] != 20 && k[0]>=1)
-				k[0]++; }
+				k[0]++;}
 		 else if (arr[i] == 1)
 			{if (k[1] == 20)
 				k[1] = 1;
@@ -123,16 +127,17 @@ int main()
 				k[9]++; }
 	}
 
-	for (i = 0; i < 10; i++)
-	{
-		if (k[i] != 20 && k[i] <= 9)
-			printf("%d\n", k[i]);
-		else
-		{
-			k[i] = 0;
-			printf("%d\n", k[i]);
-		}
-	}
+	
+	//for (i = 0; i < 10; i++)
+	//{
+	//	if (k[i] != 20 && k[i] <= 9)
+	//		printf("%d\n", k[i]);
+	//	else
+	//	{
+	//		k[i] = 0;
+	//		printf("%d\n", k[i]);
+	//	}
+	//}
 
 	return 0;
 }

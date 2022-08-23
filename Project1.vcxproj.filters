@@ -42,5 +42,14 @@
     <ClCompile Include="jungol6.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="jungol7.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="달팽이.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="zigzag.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
